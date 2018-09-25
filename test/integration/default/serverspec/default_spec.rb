@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'mailhog::default' do
 
-  describe file('/usr/local/bin/MailHog') do
+  describe file('/usr/local/bin/mailhog') do
     it { should exist }
     it { should be_file }
     it { should be_mode 755 }
@@ -10,10 +10,10 @@ describe 'mailhog::default' do
     it { should be_grouped_into 'root' }
   end
 
-  describe file('/etc/service/mailhog/run') do
+  describe file('/etc/systemd/system/mailhog.service') do
     it { should exist }
     it { should be_file }
-    it { should be_mode 755 }
+    it { should be_mode 644 }
     it { should be_owned_by 'root' }
     it { should be_grouped_into 'root' }
   end

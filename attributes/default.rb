@@ -24,17 +24,19 @@
 # SOFTWARE.
 #
 
-default['mailhog']['version'] = '0.2.0'
+default['mailhog']['version'] = '1.0.0'
 default['mailhog']['install_method'] = 'binary'
+
+default['mailhog']['opts'] = {}
 
 default['mailhog']['binary']['url'] = nil # Set it to override automatical generation
 
 default['mailhog']['binary']['mode'] = 0755
-default['mailhog']['binary']['path'] = '/usr/local/bin/MailHog'
+default['mailhog']['binary']['path'] = '/usr/local/bin/mailhog'
 
 default['mailhog']['binary']['prefix_url'] = 'https://github.com/mailhog/MailHog/releases/download/v'
 default['mailhog']['binary']['checksum']['linux_386'] = '06fc1d7bf2fced86962ab274d8f1e6c7df74a6ec3c6310aff26792bb93122d98'
-default['mailhog']['binary']['checksum']['linux_amd64'] = '11aaae19388d0a6543c935188fcc4157772d852c10be2a5d96168ee23ae6845f'
+default['mailhog']['binary']['checksum']['linux_amd64'] = 'ba921e04438e176c474d533447ae64707ffcdd1230f0153f86cb188d348f25c0'
 
 default['mailhog']['service']['owner'] = 'root'
 default['mailhog']['service']['group'] = 'root'
